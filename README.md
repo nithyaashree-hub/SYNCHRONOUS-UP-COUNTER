@@ -28,19 +28,68 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **Procedure**
 
-/* write all the steps invloved */
+1. Open Quartus software and create a new Verilog file. Paste the code and save it.
+2. Compile the program to check for errors.
+3. Generate the RTL schematic via the RTL Viewer and save the logic diagram.
+4. Use the Waveform Editor to assign nodes for clk, rstn, and out.
+5. Simulate the design with different clk and rstn combinations to generate the timing diagram, and save the results.
+
 
 **PROGRAM**
+~~~
+UP COUNTER:
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+module day7(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
 
-Developed by: RegisterNumber:
-*/
+DOWN COUNTER:
+
+module day8(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out-1;
+end
+endmodule 
+
+~~~
+Developed by: RegisterNumber:25015924
+
 
 **RTL LOGIC UP COUNTER**
+UP COUNTER:
+
+<img width="1920" height="1080" alt="Screenshot (105)" src="https://github.com/user-attachments/assets/e19ba7b1-ece8-4ddf-a6ec-764dec73105e" />
+
+
+DOWN COUNTER:
+<img width="1920" height="1080" alt="Screenshot (107)" src="https://github.com/user-attachments/assets/fbf7d8b5-ba26-4872-bd72-a63c08fff101" />
 
 **TIMING DIAGRAM FOR IP COUNTER**
+UP COUNTER:
+
+<img width="1920" height="1080" alt="Screenshot (106)" src="https://github.com/user-attachments/assets/0a769547-c3e9-4b9d-a06a-1a3317ce0612" />
+
+
+DOWN COUNTER:
+<img width="1920" height="1080" alt="Screenshot (108)" src="https://github.com/user-attachments/assets/1addae8d-10f7-47d3-9f96-0ce59c769ad7" />
 
 **TRUTH TABLE**
+<img width="544" height="275" alt="image" src="https://github.com/user-attachments/assets/aa7e290a-8247-4bc3-add3-52e4df77cd97" />
+
 
 **RESULTS**
+Thus the Synchronous 3 bit Up counter and 3 bit Down counter are implemeted and verified.
