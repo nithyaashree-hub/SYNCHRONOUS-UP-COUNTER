@@ -87,7 +87,8 @@ UP COUNTER:
 DOWN COUNTER:
 <img width="1920" height="1080" alt="Screenshot (108)" src="https://github.com/user-attachments/assets/1addae8d-10f7-47d3-9f96-0ce59c769ad7" />
 
-**TRUTH TABLE**
+**TRUTH TABLE**:
+
 <img width="544" height="275" alt="image" src="https://github.com/user-attachments/assets/aa7e290a-8247-4bc3-add3-52e4df77cd97" />
 
 
